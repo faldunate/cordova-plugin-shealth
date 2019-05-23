@@ -17,10 +17,10 @@
   specific language governing permissions and limitations
   under the License.
 -->
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-samsunghealth" version="0.0.1">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-shealth" version="0.0.1">
     <name>SamsungHealth</name>
     <description>Samsung Health Plugin</description>
-    <author>Pushparaj Samant</author>
+    <author>Francisco Aldunate</author>
     <license>MIT</license>
     <keywords>shealth, gear</keywords>
     <engines>
@@ -51,7 +51,7 @@
         </config-file>
         <source-file src="src/android/ShealthPlugin.java" target-dir="src/com/cordova/shealth/" />
         <source-file src="src/android/StepCountReader.java" target-dir="src/com/cordova/shealth/" />
-        <lib-file src="node_modules/cordova-plugin-samsunghealth/src/android/samsung-health-data-v1.3.0.jar" />
-        <lib-file src="node_modules/cordova-plugin-samsunghealth/src/android/sdk-v1.0.0.jar" />
+        <lib-file src="node_modules/cordova-plugin-shealth/src/android/samsung-health-data-v1.3.0.jar" />
+        <lib-file src="node_modules/cordova-plugin-shealth/src/android/sdk-v1.0.0.jar" />
     </platform>
 </plugin>
