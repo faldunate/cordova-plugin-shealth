@@ -185,7 +185,11 @@ public class StepCountReader {
                 .build();
 
         try {
-            mResolver.read(request).setResultListener(result -> {
+            mResolver.read(request).setResultListener(new HealthResultHolder.ResultListener<HealthDataResolver.ReadResult>(){
+
+            @Override
+            public void onResult(HealthDataResolver.ReadResult result) {
+
                 int totalCount = 0;
 
                 JSONArray stepResponse = new JSONArray();
@@ -224,7 +228,7 @@ public class StepCountReader {
                     callbackContext.success(stepResponse);
                 }
 
-            });
+            }});
         } catch (Exception e) {
             JSONArray stepResponse = new JSONArray();
             Log.e("StepCounterReader", "Getting daily step trend fails.", e);
